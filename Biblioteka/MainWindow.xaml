@@ -6,11 +6,14 @@
         xmlns:local="clr-namespace:Biblioteka"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Name="btn1" Content="Zmień motyw" HorizontalAlignment="Left" Margin="700,20,0,0" VerticalAlignment="Top" Height="30" Width="82" Background="White" Click="Button_Click"/>
-        <Button Name="btn2" Content="Wypożycz" HorizontalAlignment="Left" Margin="35,35,0,0" VerticalAlignment="Top" Height="29" Width="103"/>
-        <Button Name="btn3" Content="Oddaj" HorizontalAlignment="Left" Margin="36,0,0,0" VerticalAlignment="Center" Height="29" Width="103"/>
-        <Button Name="btn4" Content="Dodaj" HorizontalAlignment="Left" Margin="35,115,0,0" VerticalAlignment="Top" Height="29" Width="104" Click="btn4_Click"/>
-
+    <Grid x:Name="Main" Margin="0,0,625,0">
+        <Grid x:Name="Menu">
+            <Button Name="btn2" Content="Wypożycz" HorizontalAlignment="Left" Margin="33,160,0,0" VerticalAlignment="Top" Height="29" Width="106" Background="LightGray"/>
+            <Button Name="btn3" Content="Oddaj" HorizontalAlignment="Left" Margin="35,286,0,0" VerticalAlignment="Top" Height="29" Width="104" Background="LightGray"/>
+            <Button Name="btn4" Content="Dodaj" HorizontalAlignment="Left" Margin="33,225,0,0" VerticalAlignment="Top" Height="29" Width="106" Background="LightGray" Click="btn4_Click"/>
+            <Label Content="Menu" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="33,50,0,0" VerticalAlignment="Top" Height="50" Width="100" FontSize="25" />
+        </Grid>
+        <Grid x:Name="Background"></Grid>
     </Grid>
+
 </Window>

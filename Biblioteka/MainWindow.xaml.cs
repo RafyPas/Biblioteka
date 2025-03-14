@@ -19,24 +19,9 @@ namespace Biblioteka
         public MainWindow()
         {
             InitializeComponent();
-            this.Background = new SolidColorBrush(Colors.White);
         }
 
         private bool isDark = false;
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            if (!isDark)
-            {
-                this.Background = new SolidColorBrush(Colors.DarkGray);
-            }
-            else
-            {
-                this.Background = new SolidColorBrush(Colors.White);
-            }
-
-            isDark = !isDark;
-        }
 
         private void btn4_Click(object sender, RoutedEventArgs e)
         {
