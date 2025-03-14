@@ -1,0 +1,11 @@
+<Window x:Class="Biblioteka.ChoiceWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Wybor Dzialania" Height="150" Width="350" WindowStartupLocation="CenterOwner">
+    <Grid Margin="10">
+        <StackPanel HorizontalAlignment="Center">
+            <TextBlock Text="Co chcesz dodac?" FontSize="16" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="btnAddUser" Content="Dodaj uzytkownika" Margin="5" Click="btnAddUser_Click"/>
+                <Button x:Name="btnAddExemplar" Content="Dodaj egzemplarz" Margin="5" Click="btnAddExemplar_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
