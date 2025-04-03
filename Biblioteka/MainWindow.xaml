@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="Biblioteka" Height="450" Width="800">
     <Grid x:Name="Main" Margin="0,0,625,0">
-        <Grid x:Name="Menu">
-            <Button Name="btn2" Content="Wypożycz" HorizontalAlignment="Left" Margin="33,160,0,0" VerticalAlignment="Top" Height="29" Width="106" Background="LightGray"/>
-            <Button Name="btn3" Content="Oddaj" HorizontalAlignment="Left" Margin="35,286,0,0" VerticalAlignment="Top" Height="29" Width="104" Background="LightGray"/>
-            <Button Name="btn4" Content="Dodaj" HorizontalAlignment="Left" Margin="33,225,0,0" VerticalAlignment="Top" Height="29" Width="106" Background="LightGray" Click="btn4_Click"/>
-            <Label Content="Menu" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="33,50,0,0" VerticalAlignment="Top" Height="50" Width="100" FontSize="25" />
+        <Grid x:Name="Menu" Background="DarkKhaki" Margin="0,0,-22,0">
+            <Button Name="borrow_button" Content="Wypożycz" HorizontalAlignment="Left" Margin="33,160,0,0" VerticalAlignment="Top" Height="29" Width="106" Background="LightGray" Click="borrow_button_click"/>
+            <Button Name="give_back_button" Content="Oddaj" HorizontalAlignment="Left" Margin="35,286,0,0" VerticalAlignment="Top" Height="29" Width="104" Background="LightGray" Click="give_back_button_click"/>
+            <Button Name="add_button" Content="Dodaj" HorizontalAlignment="Left" Margin="33,225,0,0" VerticalAlignment="Top" Height="29" Width="106" Background="LightGray" Click="add_button_click"/>
+            <Label Content="Menu" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="33,50,42,0" VerticalAlignment="Top" Height="50" FontSize="25" />
         </Grid>
         <Grid x:Name="Background" Margin="180,0,-625,0"></Grid>
     </Grid>

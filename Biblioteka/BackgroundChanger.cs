@@ -10,16 +10,7 @@ using System.Windows;
 
 namespace Biblioteka
 {
-    //interfejs do zmiany tła na stronie głównej
-    public interface IBackgroundChanger
-    {
-        void StartChanging(System.Windows.Controls.Grid targetGrid);
-        void StopChanging();
-        void SetInterval(int seconds);
-
-    }
-
-    public class ImageBackgroundChanger : IBackgroundChanger
+    public class ImageBackgroundChanger : IImageBackgroundChanger
     {
         private readonly string[] imagePaths;
         private int currentIndex = 0;
@@ -61,7 +52,7 @@ namespace Biblioteka
             try
             {
                 string fullPath = imagePaths[currentIndex];
-                if(System.IO.File.Exists(fullPath))
+                if (System.IO.File.Exists(fullPath))
                 {
                     BitmapImage bitmap = new BitmapImage();
                     bitmap.BeginInit();
