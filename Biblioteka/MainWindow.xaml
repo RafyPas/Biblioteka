@@ -9,7 +9,7 @@
     <Grid x:Name="Main" Margin="0,0,625,0">
         <Grid x:Name="Menu" Background="DarkKhaki" Margin="0,0,-22,0">
             <Button Name="borrow_button" Content="Wypożycz" HorizontalAlignment="Left" Margin="33,160,0,0" VerticalAlignment="Top" Height="29" Width="106" Background="LightGray" Click="borrow_button_click"/>
-            <Button Name="give_back_button" Content="Oddaj" HorizontalAlignment="Left" Margin="35,286,0,0" VerticalAlignment="Top" Height="29" Width="104" Background="LightGray" Click="give_back_button_click"/>
+            <Button Name="return_button" Content="Oddaj" HorizontalAlignment="Left" Margin="35,286,0,0" VerticalAlignment="Top" Height="29" Width="106" Background="LightGray" Click="return_button_click"/>
             <Button Name="add_button" Content="Dodaj" HorizontalAlignment="Left" Margin="33,225,0,0" VerticalAlignment="Top" Height="29" Width="106" Background="LightGray" Click="add_button_click"/>
             <Label Content="Menu" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="33,50,42,0" VerticalAlignment="Top" Height="50" FontSize="25" />
         </Grid>
