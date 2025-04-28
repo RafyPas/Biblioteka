@@ -7,10 +7,11 @@
         mc:Ignorable="d"
         Title="Oddaj" Height="450" Width="800">
     <Grid x:Name="Background">
-        <Grid x:Name="Content" Height="300" Width="500" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkKhaki" Opacity="0.8">
-            <Label Content="Zaloguj się:" Margin="175,40,175,210" Width="150" Height="40" FontSize="20" HorizontalContentAlignment="Center"></Label>
-            <TextBox Margin="0,0,0,0" Width="250" Height="25" VerticalContentAlignment="Center" Text="Username"/>
-            <TextBox Margin="0,80,0,0" Width="250" Height="25" VerticalContentAlignment="Center" Text="Password"/>
+        <Grid x:Name="Content" Height="300" Width="500" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkKhaki">
+            <Label Content="Twoje wypożyczone książki:" Margin="20,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16"/>
+            <ListBox x:Name="BorrowedBooksListBox" Margin="20,40,20,60" DisplayMemberPath="Title"/>
+            <Button Content="Oddaj książkę" x:Name="ReturnBookButton" Width="120" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" Click="ReturnBookButton_Click"/>
         </Grid>
+
     </Grid>
 </Window>

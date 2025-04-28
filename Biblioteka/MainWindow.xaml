@@ -8,18 +8,41 @@
         Title="Biblioteka" Height="450" Width="800">
     <Grid x:Name="Main" Margin="0,0,625,0">
         <Grid x:Name="Menu" Background="DarkKhaki" Margin="0,0,-25,0">
-            <Button Name="borrow_button" Content="Wypożycz" HorizontalAlignment="Left" Margin="33,160,0,0" VerticalAlignment="Top" Height="29" Width="106" Background="LightGray" Click="borrow_button_click"/>
-            <Button Name="return_button" Content="Oddaj" HorizontalAlignment="Left" Margin="35,286,0,0" VerticalAlignment="Top" Height="29" Width="106" Background="LightGray" Click="return_button_click"/>
-            <Button Name="add_button" Content="Dodaj" HorizontalAlignment="Left" Margin="33,225,0,0" VerticalAlignment="Top" Height="29" Width="106" Background="LightGray" Click="add_button_click"/>
+            <Button Name="borrow_button" Content="Wypożycz" HorizontalAlignment="Left" Margin="33,160,0,0" VerticalAlignment="Top" Height="29" Width="106" Background="LightGray" Click="borrow_button_click" IsEnabled="False"/>
+            <Button Name="return_button" Content="Oddaj" HorizontalAlignment="Left" Margin="35,286,0,0" VerticalAlignment="Top" Height="29" Width="106" Background="LightGray" Click="return_button_click" IsEnabled="False"/>
+            <Button Name="add_button" Content="Dodaj" HorizontalAlignment="Left" Margin="33,225,0,0" VerticalAlignment="Top" Height="29" Width="106" Background="LightGray" Click="add_button_click" IsEnabled="False"/>
             <Label Content="Menu" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="33,50,42,0" VerticalAlignment="Top" Height="50" FontSize="25" />
+            <Label x:Name="greetingLabel" Content="" HorizontalAlignment="Left" Margin="33,320,0,0" VerticalAlignment="Top" FontSize="16"/>
         </Grid>
         <Grid x:Name="Background" Margin="180,0,-625,0">
             <Grid x:Name="log_form" Width="300" Height="300" Margin="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Background="DarkKhaki">
-                <Label Content="Zaloguj się:" Margin="75,40,75,0" Width="150" Height="40" FontSize="20" VerticalAlignment="Top" HorizontalContentAlignment="Center"></Label>
-                <TextBox Margin="25,100,25,175" Width="250" Height="25" VerticalContentAlignment="Center" Text="Username"/>
-                <TextBox Margin="25,150,25,125" Width="250" Height="25" VerticalContentAlignment="Center" Text="Password"/>
-                <Button Content="Utwórz konto!" HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" Margin="0,190,0,0" Width="100" Height="20" FontSize="10"></Button>
-                <Button x:Name="log_btn" Content="Zaloguj się" FontSize="10" Width="100" Height="20" Margin="100,170,100,0"></Button>
+                <Grid x:Name="LoginGrid" Visibility="Visible">
+                    <Label Content="Zaloguj się:" Margin="75,40,75,0" Width="150" Height="40" FontSize="20" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+
+                    <Label Content="Nazwa użytkownika:" Margin="25,90,25,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtUsername" Margin="25,115,25,0" Width="250" Height="25" VerticalAlignment="Top"/>
+
+                    <Label Content="Hasło:" Margin="25,150,25,0" VerticalAlignment="Top"/>
+                    <PasswordBox x:Name="txtPassword" Margin="25,175,25,0" Width="250" Height="25" VerticalAlignment="Top"/>
+
+                    <Button Content="Utwórz konto!" Click="ShowRegisterForm_Click" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,210,0,0" Width="100" Height="20" FontSize="10"/>
+                    <Button x:Name="log_btn" Content="Zaloguj się" Click="log_btn_Click" FontSize="10" Width="100" Height="20" Margin="100,250,100,0" VerticalAlignment="Top"/>
+                </Grid>
+                <Grid x:Name="RegisterGrid" Visibility="Collapsed">
+                    <Label Content="Załóż konto:" Margin="75,40,75,0" Width="150" Height="40" FontSize="20" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+
+                    <Label Content="Nazwa użytkownika:" Margin="25,90,25,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="regUsername" Margin="25,115,25,0" Width="250" Height="25" VerticalAlignment="Top"/>
+
+                    <Label Content="E-mail:" Margin="25,150,25,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="regEmail" Margin="25,175,25,0" Width="250" Height="25" VerticalAlignment="Top"/>
+
+                    <Label Content="Hasło:" Margin="25,210,25,0" VerticalAlignment="Top"/>
+                    <PasswordBox x:Name="regPassword" Margin="25,235,25,0" Width="250" Height="25" VerticalAlignment="Top"/>
+
+                    <Button Content="Stwórz konto" Click="CreateAccount_Click" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,270,0,0" Width="100" Height="20" FontSize="10"/>
+                    <Button Content="Wróć do logowania" Click="ShowLoginForm_Click" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,300,0,0" Width="120" Height="20" FontSize="10"/>
+                </Grid>
             </Grid>
         </Grid>
     </Grid>

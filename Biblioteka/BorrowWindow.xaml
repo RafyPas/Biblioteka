@@ -8,11 +8,11 @@
         Title="Wypożycz" Height="450" Width="800">
     <Grid x:Name="Background">
         <Grid x:Name="Content" Background="DarkKhaki" Margin="80,80,80,80">
-            <ListBox Margin="35,50,410,30"></ListBox>
+            <ListBox x:Name="GenresListBox" Margin="35,50,410,30" SelectionChanged="GenresListBox_SelectionChanged"/>
             <Label Content="Wybierz gatunek:" HorizontalAlignment="Left" Margin="35,20,0,0" VerticalAlignment="Top" Width="195"/>
-            <ListBox Margin="310,50,135,30"></ListBox>
+            <ListBox x:Name="BooksListBox" Margin="310,50,135,30" DisplayMemberPath="Title"/>
             <Label Content="Wybierz książkę:" HorizontalAlignment="Left" Margin="310,20,0,0" VerticalAlignment="Top" Width="193"/>
-            <Button Content="Wypożycz" HorizontalAlignment="Left" Margin="530,210,0,0" VerticalAlignment="Top" Height="30" Width="80"/>
+            <Button Content="Wypożycz" Click="BorrowButton_Click" HorizontalAlignment="Left" Margin="530,210,0,0" VerticalAlignment="Top" Height="30" Width="80"/>
         </Grid>
     </Grid>
 </Window>
